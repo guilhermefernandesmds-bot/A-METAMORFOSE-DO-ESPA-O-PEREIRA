@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Metamorfose do Espaço Habitado — Milton Santos</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f2f4f7;
+      color: #222;
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 950px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 18px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.10);
+    }
+
+    h1 {
+      text-align: center;
+      color: #1d3557;
+      margin-bottom: 10px;
+      font-size: 30px;
+    }
+
+    .autor {
+      text-align: center;
+      color: #666;
+      margin-bottom: 30px;
+      font-size: 17px;
+    }
+
+    h2 {
+      color: #1d3557;
+      margin-top: 30px;
+      font-size: 22px;
+    }
+
+    p {
+      text-align: justify;
+      font-size: 17px;
+      margin-bottom: 20px;
+    }
+
+    .controles {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 25px;
+    }
+
+    button {
+      border: none;
+      border-radius: 10px;
+      padding: 13px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background: #1d3557;
+      color: white;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      opacity: 0.85;
+      transform: translateY(-1px);
+    }
+
+    #status {
+      text-align: center;
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        margin: 15px auto;
+        padding: 10px;
+      }
+
+      .card {
+        padding: 22px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="card">
+
+      <h1>A METAMORFOSE DO ESPAÇO HABITADO: SÍNTESE TEÓRICA</h1>
+
+      <div class="autor">
+        Milton Santos
+      </div>
+
+      <div class="controles">
+        <button onclick="iniciarLeitura()">🔊 Ouvir texto</button>
+        <button onclick="pararLeitura()">⏹ Parar</button>
+      </div>
+
+      <div id="status">
+        Clique em "Ouvir texto" para começar.
+      </div>
+
+      <h2>O Espaço como Sistema de Objetos e Ações</h2>
+
+      <p>
+        Em A Metamorfose do Espaço Habitado, Milton Santos define o espaço geográfico não como um receptáculo passivo, mas como uma construção social e histórica viva. O espaço resulta da união indissociável entre um sistema de objetos (infraestruturas, construções e elementos físicos) e um sistema de ações (trabalho, fluxos e relações sociais), em que a ação humana no presente ressignifica constantemente o território.
+      </p>
+
+      <h2>A Distinção entre Paisagem e Espaço</h2>
+
+      <p>
+        O autor estabelece uma clara diferença entre paisagem e espaço geográfico. A paisagem representa a dimensão visível e material acumulada no território ao longo do tempo — o acúmulo de trabalhos passados manifestado em "rugosidades". O espaço, por sua vez, é essa mesma paisagem animada e dinamizada pelas relações econômicas, políticas e sociais do presente.
+      </p>
+
+      <h2>Categorias de Análise e Seletividade Espacial</h2>
+
+      <p>
+        A compreensão do meio habitado fundamenta-se na articulação de quatro categorias: forma (o aspecto visível), função (utilidade), estrutura (a organização socioeconômica) e processo (a dinâmica histórica). Com o advento do meio técnico-científico-informacional, a difusão da tecnologia reorganiza o território de forma desigual, gerando uma seletividade espacial que privilegia certas regiões e aprofunda as desigualdades.
+      </p>
+
+      <h2>O Espaço Vivido e a Dimensão do Cotidiano</h2>
+
+      <p>
+        Milton Santos enfatiza que o espaço habitado ganha sua dimensão mais concreta no cotidiano e no lugar. Na escala local ocorrem as relações de solidariedade, a cultura e as práticas sociais diretas. Ao vivenciar o território no dia a dia, a sociedade transforma a estrutura física em espaço vivido, fazendo do local o principal palco da cidadania.
+      </p>
+
+    </div>
+  </div>
+
+  <script>
+    const texto = `
+      A Metamorfose do Espaço Habitado: Síntese Teórica.
+
+      O Espaço como Sistema de Objetos e Ações.
+
+      Em A Metamorfose do Espaço Habitado, Milton Santos define o espaço geográfico não como um receptáculo passivo, mas como uma construção social e histórica viva. O espaço resulta da união indissociável entre um sistema de objetos, como infraestruturas, construções e elementos físicos, e um sistema de ações, como trabalho, fluxos e relações sociais, em que a ação humana no presente ressignifica constantemente o território.
+
+      A Distinção entre Paisagem e Espaço.
+
+      O autor estabelece uma clara diferença entre paisagem e espaço geográfico. A paisagem representa a dimensão visível e material acumulada no território ao longo do tempo, o acúmulo de trabalhos passados manifestado em rugosidades. O espaço, por sua vez, é essa mesma paisagem animada e dinamizada pelas relações econômicas, políticas e sociais do presente.
+
+      Categorias de Análise e Seletividade Espacial.
+
+      A compreensão do meio habitado fundamenta-se na articulação de quatro categorias: forma, o aspecto visível; função, a utilidade; estrutura, a organização socioeconômica; e processo, a dinâmica histórica. Com o advento do meio técnico-científico-informacional, a difusão da tecnologia reorganiza o território de forma desigual, gerando uma seletividade espacial que privilegia certas regiões e aprofunda as desigualdades.
+
+      O Espaço Vivido e a Dimensão do Cotidiano.
+
+      Milton Santos enfatiza que o espaço habitado ganha sua dimensão mais concreta no cotidiano e no lugar. Na escala local ocorrem as relações de solidariedade, a cultura e as práticas sociais diretas. Ao vivenciar o território no dia a dia, a sociedade transforma a estrutura física em espaço vivido, fazendo do local o principal palco da cidadania.
+    `;
+
+    function iniciarLeitura() {
+
+      if (!window.speechSynthesis) {
+        document.getElementById("status").textContent =
+          "Seu navegador não suporta leitura de texto.";
+        return;
+      }
+
+      speechSynthesis.cancel();
+
+      const fala = new SpeechSynthesisUtterance(texto);
+
+      fala.lang = "pt-BR";
+      fala.rate = 0.88;
+      fala.pitch = 1;
+
+      const vozes = speechSynthesis.getVoices();
+
+      let voz = vozes.find(function(v) {
+        return v.lang === "pt-BR";
+      });
+
+      if (!voz) {
+        voz = vozes.find(function(v) {
+          return v.lang.toLowerCase().startsWith("pt");
+        });
+      }
+
+      if (voz) {
+        fala.voice = voz;
+      }
+
+      fala.onstart = function() {
+        document.getElementById("status").textContent =
+          "🔊 Leitura em andamento...";
+      };
+
+      fala.onend = function() {
+        document.getElementById("status").textContent =
+          "✅ Leitura concluída.";
+      };
+
+      fala.onerror = function() {
+        document.getElementById("status").textContent =
+          "⚠️ Erro ao iniciar a leitura.";
+      };
+
+      speechSynthesis.speak(fala);
+    }
+
+    function pararLeitura() {
+
+      if (window.speechSynthesis) {
+        speechSynthesis.cancel();
+      }
+
+      document.getElementById("status").textContent =
+        "⏹ Leitura interrompida.";
+    }
+  </script>
+
+</body>
+</html>
